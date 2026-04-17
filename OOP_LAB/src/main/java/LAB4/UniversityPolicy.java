@@ -6,7 +6,7 @@ public final class UniversityPolicy {
     
     public static void showPolicyHeader(){
         System.out.println("====================================");
-        System.out.println("   OFFICIAL UNIVERSITY PAYMENT POLICY");
+        System.out.println(" OFFICIAL UNIVERSITY PAYMENT POLICY");
         System.out.println("====================================");
     }
     
