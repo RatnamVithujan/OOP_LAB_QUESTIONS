@@ -31,6 +31,16 @@ abstract class StaffMember{
         return department;
     }
     
+    public void changeDepartment(String newDepartment){
+        if (!newDepartment.isEmpty()){
+            this.department = newDepartment;
+        }
+    }
+    
+    public final void showCommonNotice(){
+        System.out.println("Notice: Please submit your timesheets by the 25th of each month.");
+    }
+    
     public final void displayBasicDetails(){
         System.out.println("Staff ID: " + staffID);
         System.out.println("Full Name: " + fullName);
