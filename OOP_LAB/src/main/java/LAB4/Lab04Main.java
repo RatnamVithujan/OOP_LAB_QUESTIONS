@@ -3,17 +3,28 @@ package LAB4;
 public class Lab04Main {
     public static void main(String[] args){
         
+        StaffMember.showSystemName();
+        System.out.println();
+        
         UniversityPolicy.showPolicyHeader();
         System.out.println("University Name: " + UniversityPolicy.UNIVERSITY_NAME);
         System.out.println();
         
-        Lecturer lec1 = new Lecturer("L001","Dr. Jehan", "Computer Science", 3, 5000.0);
+        Lecturer lec1 = new Lecturer("L001","Dr. Jehan", "Physics and Electronics", 3, 15000.0);
+        Lecturer lec2 = new Lecturer("L002","Dr. Prabth", "Physics", 2, 25000.0);
         LabAssistant assistant1 = new LabAssistant("A001","Ratnam Vithujan", "Electronics", 40, 250.0);
+        //==================================================================================================
+        System.out.println("Total Number of Staffs: " + StaffMember.getStaffCount());
         
         System.out.println("--- Lecturer Information ---");
         lec1.displayLecturerDetails();
         System.out.println("Total Monthly Payment: " + lec1.calculateMonthlyPayment());
         System.out.println("Estimated Bonus: " + UniversityPolicy.calculateBonus(lec1.calculateMonthlyPayment()));
+        
+        System.out.println();
+        lec2.displayLecturerDetails();
+        System.out.println("Total Monthly Payment: " + lec2.calculateMonthlyPayment());
+        System.out.println("Estimated Bonus: " + UniversityPolicy.calculateBonus(lec2.calculateMonthlyPayment()));
         
         System.out.println("\n------------------------\n");
         
