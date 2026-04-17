@@ -4,11 +4,21 @@ abstract class StaffMember{
     private final String staffID;
     private String fullName;
     protected String department;
+    private static int staffCount = 0;
     
     public StaffMember(String staffID, String fullName , String department){
         this.staffID = staffID;
         this.fullName = fullName;
         this.department = department;
+        staffCount++;
+    }
+    
+    public static void showSystemName(){
+        System.out.println(">>> University Staff Payment System <<<");
+    }
+    
+    public static int getStaffCount(){
+        return staffCount;
     }
     
     public String getstaffID(){
@@ -30,4 +40,5 @@ abstract class StaffMember{
     public abstract double calculateMonthlyPayment();
     
     //Why this is abstract because prevent the incomplete objects
+    //It is static because it belongs to the Class itself
 }
